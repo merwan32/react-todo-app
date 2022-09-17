@@ -1,4 +1,6 @@
 import React ,{ Component }from "react";
+import './addtodo.css'
+
 
 class Addtodo extends Component{
     state = {
@@ -21,7 +23,7 @@ class Addtodo extends Component{
             <div>
                 <form onSubmit={this.handelsubmit}>
                     <input type="text" placeholder="type your title here" id="title" onChange={this.handelchange}/>
-                    <button>add</button>
+                    <button>&#10549;</button>
                 </form>
             </div>
         )

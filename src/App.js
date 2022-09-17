@@ -1,6 +1,7 @@
 import React , {Component} from "react";
 import Addtodo from './components/Addtodo/addtodo'
 import TodoItem from './components/TodoItems/Todoitem'
+import './App.css'
 
 class App extends Component{
   state = {
@@ -8,7 +9,7 @@ class App extends Component{
       {
         "id": 1,
         "title": "delectus aut autem",
-        "completed": false
+        "completed": true
       },
       {
         "id": 2,
@@ -46,7 +47,14 @@ class App extends Component{
 
   }
 
+  doneItem =(id)=> {
+    let todos = this.state.todos;
+    let t = todos.findIndex(todo => todo.id === id)
+    todos[t].completed = !todos[t].completed
+    console.log(todos[t].completed)
+    this.setState(todos)
 
+  }
   addItem = (item) => {
     let todos = this.state.todos
     item.id = Math.random()
@@ -57,9 +65,12 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        <h3>to list</h3>
-        <TodoItem todos={this.state.todos} deletItem={this.deletItem}/>
-        <Addtodo addItem={this.addItem}/>
+        <h3>TODO</h3>
+        <div className="container">
+          <Addtodo addItem={this.addItem}/>
+          <TodoItem todos={this.state.todos} deletItem={this.deletItem} doneItem={this.doneItem} />  
+        </div>
+        
       </div>
     );
   }

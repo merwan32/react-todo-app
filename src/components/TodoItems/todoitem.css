@@ -1,0 +1,44 @@
+.todos {
+    width: 100%;
+    background-color: #25273C;
+    margin: 50px 0;
+}
+
+.todo button {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 2px solid #BF56FFC9;
+    color: white;
+    font-size: 25px;
+    margin: 20px 0 20px 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.todo button.done{
+    background: linear-gradient(111.35deg, #E600FA 10.12%, rgba(82, 97, 234, 0) 82.22%);
+}
+.todo button.delete {
+    border:2px solid #7C0A02;
+    background: linear-gradient(111.35deg, #7C0A02 10.12%, #FF2800 82.22%);
+}
+.todo span {
+    font-family: 'Monda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 59px;
+    border-bottom: 4px solid rgba(72, 64, 64, 0.37);
+    max-width: 450px;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.todo {
+    height: 82px;
+    display: flex;
+    align-items: center;
+}
